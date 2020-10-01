@@ -1,26 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Header from "./components/Header";
+import SearchName from "./components/search"
+import Table from "./components/Table"
+import employees from "./employees.json"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    employees,
+    search: ""
+  };
+
+  render(){
+    return(
+      <div>
+        <table className = "table table-striped">
+        <Header />
+        <SearchName />
+        <thread>
+        <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <th scope="col">DOB</th>
+        </tr>
+    </thread>
+        {this.state.employees.map(employee => (
+          <Table 
+          id={employee.id}
+          img={employee.image}
+          name={employee.name}
+          phone={employee.phone}
+          email={employee.email}
+          dob={employee.dob}
+          />
+        ))}
+        </table>
+      </div>
+    )
+  }
 }
+
+// function App() {
+//   return (
+//     <div>
+//     <Header />
+//     <SearchName />
+//     <Table />
+//     </div>
+//   )
+
+// }
 
 export default App;

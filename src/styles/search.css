@@ -1,0 +1,10 @@
+.form{
+    width: 100%;
+    text-align:center; 
+}
+
+.searchBar{
+    margin: 0 auto;
+    display: inline-block;
+
+  }
