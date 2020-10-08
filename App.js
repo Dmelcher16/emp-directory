@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "./src/components/Header";
 import SearchName from "./src/components/search"
 import Table from "./src/components/Table"
-import employees from "./src/employees.json"
+import employees from "./employees.json"
 
 class App extends Component {
   state = {
