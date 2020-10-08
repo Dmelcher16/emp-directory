@@ -41,15 +41,5 @@ class Index extends Component {
   }
 }
 
-// function App() {
-//   return (
-//     <div>
-//     <Header />
-//     <SearchName />
-//     <Table />
-//     </div>
-//   )
-
-// }
 
 export default Index;
