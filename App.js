@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Header from "./components/Header";
-import SearchName from "./components/search"
-import Table from "./components/Table"
-import employees from "./employees.json"
+import Header from "./src/components/Header";
+import SearchName from "./src/components/search"
+import Table from "./src/components/Table"
+import employees from "./src/employees.json"
 
 class App extends Component {
   state = {
