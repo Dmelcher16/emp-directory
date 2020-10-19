@@ -1,45 +1,6 @@
-import React, { Component } from "react";
-import Header from "./components/Header";
-import SearchName from "./components/search"
-import Table from "./components/Table"
-import employees from "./employees.json"
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './app';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-class Index extends Component {
-  state = {
-    employees,
-    search: ""
-  };
-
-  render(){
-    return(
-      <div>
-        <table className = "table table-striped">
-        <Header />
-        <SearchName />
-        <thread>
-        <tr>
-        <th scope="col">Image</th>
-        <th scope="col">Name</th>
-        <th scope="col">Phone</th>
-        <th scope="col">Email</th>
-        <th scope="col">DOB</th>
-        </tr>
-    </thread>
-        {this.state.employees.map(employee => (
-          <Table 
-          id={employee.id}
-          img={employee.image}
-          name={employee.name}
-          phone={employee.phone}
-          email={employee.email}
-          dob={employee.dob}
-          />
-        ))}
-        </table>
-      </div>
-    )
-  }
-}
-
-
-export default Index;
+ReactDOM.render(<App />, document.getElementById('root'));
